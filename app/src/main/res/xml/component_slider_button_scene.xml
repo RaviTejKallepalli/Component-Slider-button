@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/transition"
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:touchAnchorId="@+id/bg_circle_button"
+            app:touchAnchorSide="right" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/bg_button"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/bg_circle_button"
+            app:layout_constraintTop_toTopOf="@id/bg_circle_button" />
+
+        <Constraint
+            android:id="@+id/bg_circle_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/bg_circle_button"
+            app:layout_constraintEnd_toEndOf="@id/bg_circle_button"
+            app:layout_constraintTop_toTopOf="@id/bg_circle_button" />
+
+        <Constraint
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/bg_button"
+            app:layout_constraintEnd_toEndOf="@id/bg_button"
+            app:layout_constraintStart_toStartOf="@id/bg_button"
+            app:layout_constraintTop_toTopOf="@id/bg_button" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/bg_button"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/bg_circle_button"
+            app:layout_constraintTop_toTopOf="@id/bg_circle_button" />
+
+        <Constraint
+            android:id="@+id/bg_circle_button"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/bg_button"
+            app:layout_constraintEnd_toEndOf="@id/bg_button"
+            app:layout_constraintStart_toStartOf="@id/bg_button"
+            app:layout_constraintTop_toTopOf="@id/bg_button" />
+
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/bg_circle_button"
+            app:layout_constraintEnd_toEndOf="@id/bg_circle_button"
+            app:layout_constraintTop_toTopOf="@id/bg_circle_button" />
+    </ConstraintSet>
+</MotionScene>

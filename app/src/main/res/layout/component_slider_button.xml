@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/component_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layoutDescription="@xml/component_slider_button_scene">
+
+        <View
+            android:id="@+id/bg_button"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/bg_black"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/bg_circle_button"
+            app:layout_constraintTop_toTopOf="@id/bg_circle_button" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:letterSpacing="0.2"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/bg_button"
+            app:layout_constraintEnd_toEndOf="@id/bg_button"
+            app:layout_constraintStart_toStartOf="@id/bg_button"
+            app:layout_constraintTop_toTopOf="@id/bg_button"
+            tools:text="Slide to pay" />
+
+        <View
+            android:id="@+id/bg_circle_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/bg_white"
+            android:elevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/ic_baseline_double_arrow_24"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/bg_circle_button"
+            app:layout_constraintEnd_toEndOf="@id/bg_circle_button"
+            app:layout_constraintTop_toTopOf="@id/bg_circle_button" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>
