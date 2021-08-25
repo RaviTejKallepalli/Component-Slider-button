@@ -56,7 +56,7 @@ class SliderLayout @JvmOverloads constructor(
 
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
                 if (legalContentChecked) {
-                    binding.componentSlider.enableTransition(R.id.transition, false)
+//                    binding.componentSlider.enableTransition(R.id.transition, false)
                     listener.onComplete()
                 } else {
                     motionLayout?.transitionToStart()
